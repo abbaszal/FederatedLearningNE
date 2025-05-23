@@ -2,13 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def encode_client(i: int, num_clients: int):
-    """
-    Args:
-        i (int): Index of the client.
-        num_clients (int): Number of clients.
-
-    Returns a string representation of the one-hot encoding of the client.
-    """
     encoded = [0] * num_clients
     encoded[i] = 1
     encoded = "".join(map(str, encoded))
