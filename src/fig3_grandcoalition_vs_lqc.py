@@ -7,16 +7,7 @@ linestyles = ['-', '-.' , ':', '--']
 colors = ['black', 'blue', 'fuchsia', 'red']
 
 def plot_grandcoalition_vs_lqc(df: pd.DataFrame, title: str|None=None, savepath: str|None=None):
-    """
-    Plots the occurrences of grand coalition Nash Equilibrium (NE) against the number of bad clients.
-
-    Args:
-        df (pd.DataFrame): DataFrame containing the data with 'num_bad_clients' as x-axis values
-            and columns corresponding to different noise standard deviations.
-        title (str|None, optional): Title of the plot. Defaults to None.
-        savepath (str|None, optional): Path to save the plot. Defaults to None.
-    """
-
+    
     plt.figure(figsize=(5, 3))
     for i, noise_std in enumerate(noise_std_values):
         plt.plot(
