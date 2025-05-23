@@ -202,7 +202,8 @@ if __name__=='__main__':
     if not args.save_dir:
         base='/results'
         name=f"{'FedLR' if args.approach=='fedlr' else 'FedFor'}_HuGaDB_LQC_0_to_10"
-        args.save_dir=os.path.join(base,name+(f"_{args.n_trials * 2 }Trials" if args.n_trials!=50 else""))
+        multiplier = len(args.hyper_params)
+        args.save_dir=os.path.join(base,name+(f"_{args.n_trials  * multiplier }Trials" if args.n_trials!=50 else""))
 
 
 
