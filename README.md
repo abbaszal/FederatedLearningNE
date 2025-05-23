@@ -43,7 +43,7 @@ scikit-learn >= 1.6.1
 #### HuGaDB Dataset
 
 * The HuGaDB dataset should be preprocessed using the code available at https://github.com/thomasmarchioro3/FederatedForestsWithDP.
-Clone or copy the contents of the metadata directory from that repository into data/HuGaDB/, and ensure all files are placed correctly within the data/ directory structure.
+Clone or copy the contents of the metadata directory from that repository into `data/HuGaDB/`, and ensure all files are placed correctly within the `data/` directory structure.
 * The HuGaDB dataset is pre-partitioned for **18 clients**.
 
 
