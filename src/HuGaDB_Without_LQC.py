@@ -220,8 +220,8 @@ def parse_args():
 
     # Basic
     p_basic = subparsers.add_parser('basic')
-    p_basic.add_argument('--train_pattern', type=str,default='/data/metadata/train_{i:02d}.csv')
-    p_basic.add_argument('--test_pattern', type=str,default='/data/metadata/test_{i:02d}.csv')
+    p_basic.add_argument('--train_pattern', type=str,default='data/metadata/train_{i:02d}.csv')
+    p_basic.add_argument('--test_pattern', type=str,default='data/metadata/test_{i:02d}.csv')
     p_basic.add_argument('--n_clients', type=int, default=10)
     p_basic.add_argument('--n_trials', type=int, default=1)
     p_basic.add_argument('--random_seed', type=int, default=42)
@@ -233,8 +233,8 @@ def parse_args():
 
     # Evaluating
     p_eval = subparsers.add_parser('evaluating')
-    p_eval.add_argument('--train_pattern', type=str,default='/data/metadata/train_{i:02d}.csv')
-    p_eval.add_argument('--test_pattern', type=str,default='/data/metadata/test_{i:02d}.csv')
+    p_eval.add_argument('--train_pattern', type=str,default='data/metadata/train_{i:02d}.csv')
+    p_eval.add_argument('--test_pattern', type=str,default='data/metadata/test_{i:02d}.csv')
     p_eval.add_argument('--subsample_test_size', type=int, default=950)
     p_eval.add_argument('--random_seed', type=int, default=42)
     p_eval.add_argument('--n_clients', type=int, default=10)
@@ -253,17 +253,17 @@ if __name__ == '__main__':
 
     if args.command == 'basic':
         if args.approach == 'fedlr':
-            args.save_dir = '/results/FedLR_HuGaDB_without_LQC'
+            args.save_dir = 'results/FedLR_HuGaDB_without_LQC'
             args.base_out = 'HuGaDB_results_with_LR.csv'
         else:  # fedfor
-            args.save_dir =  '/results/FedFor_HuGaDB_without_LQC'
+            args.save_dir =  'results/FedFor_HuGaDB_without_LQC'
             args.base_out = 'HuGaDB_results_with_FedFor.csv'
 
     elif args.command == 'evaluating':
         if args.approach == 'fedlr':
-            args.save_dir = '/results/FedLR_HuGaDB_without_LQC/evaluate_grand_combination_without_LQC'
+            args.save_dir = 'results/FedLR_HuGaDB_without_LQC/evaluate_grand_combination_without_LQC'
         else:  # fedfor
-            args.save_dir ='/results/FedFor_HuGaDB_without_LQC/evaluate_grand_combination_without_LQC'
+            args.save_dir ='results/FedFor_HuGaDB_without_LQC/evaluate_grand_combination_without_LQC'
 
     if args.command == 'basic':
         basic_run(args)

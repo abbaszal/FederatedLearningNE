@@ -176,7 +176,7 @@ def parse_args():
     import argparse
     p=argparse.ArgumentParser()
 
-    p.add_argument('--file_path',type=str,default='/data/spambase.data')
+    p.add_argument('--file_path',type=str,default='data/spambase.data')
     p.add_argument('--approach',choices=['fedlr','fedfor'])
     p.add_argument('--n_trials',type=int,default=50)
     p.add_argument('--n_clients',type=int,default=10)
@@ -205,7 +205,7 @@ if __name__=='__main__':
     scaler=StandardScaler();X_train=scaler.fit_transform(X_train);X_test=scaler.transform(X_test)
 
     if not args.save_dir:
-        base='/results'
+        base='results'
         name=f"{'FedLR' if args.approach=='fedlr' else 'FedFor'}_Spambase_LQC_0_to_10"
         multiplier = len(args.hyper_params)
         args.save_dir=os.path.join(base,name+(f"_{args.n_trials  * multiplier }Trials" if args.n_trials!=50 else""))

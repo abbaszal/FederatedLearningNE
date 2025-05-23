@@ -1,14 +1,12 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 
 patterns = [ "x" , "o", "*", "/"]
 
 def find_top_k_ne(ne_hist_dict: dict[int, pd.DataFrame], k: int):
-    """
-    Find top k Nash equilibria with overall most occurrences.
-    """
 
     ne_hist_df = pd.concat(ne_hist_dict.values())
     ne_hist_df = ne_hist_df.groupby('Nash equilibrium').agg({'count': 'sum'}).reset_index()
@@ -92,7 +90,7 @@ if __name__ == "__main__":
                 ne_hist_dict[num_bad] = ne_hist
 
             top_k_ne = find_top_k_ne(ne_hist_dict, k=k)
-
+            os.makedirs("fig", exist_ok=True)
             title = f"{model_dataset.replace('_', ' ')} (top {k} NE)"
             savepath = f"fig/ne_hist_vs_lqc_{model_dataset}.pdf"
             plot_ne_vs_lqc(ne_hist_dict, top_k_ne=top_k_ne, savepath=savepath, title=title)

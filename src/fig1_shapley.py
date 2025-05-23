@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 def encode_client(i: int, num_clients: int):
     encoded = [0] * num_clients
@@ -72,6 +73,8 @@ if __name__ == "__main__":
         local_accuracies = [df[df["Combination"] == encode_client(i, num_players)]["Global Accuracy"].values[0] for i in range(num_players)]
 
         title = csv_file.split("/")[1].split("_without")[0].replace("_", " ")
+
+        os.makedirs("fig", exist_ok=True)
 
         # print(shapley_values)
         outfile = "fig/shapley_" + csv_file.split("/")[-1].replace(".csv", ".pdf")

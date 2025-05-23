@@ -174,7 +174,7 @@ def parse_args():
 
     p=argparse.ArgumentParser()
 
-    p.add_argument('--data_root',type=str,default='/data/metadata')
+    p.add_argument('--data_root',type=str,default='data/metadata')
     p.add_argument('--save_dir',type=str,default=None)
     p.add_argument('--approach',choices=['fedlr','fedfor'])
     p.add_argument('--n_trials',type=int,default=50)
@@ -200,7 +200,7 @@ if __name__=='__main__':
 
     
     if not args.save_dir:
-        base='/results'
+        base='results'
         name=f"{'FedLR' if args.approach=='fedlr' else 'FedFor'}_HuGaDB_LQC_0_to_10"
         multiplier = len(args.hyper_params)
         args.save_dir=os.path.join(base,name+(f"_{args.n_trials  * multiplier }Trials" if args.n_trials!=50 else""))

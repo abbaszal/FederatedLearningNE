@@ -1,5 +1,6 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
+import os
 
 noise_std_values = [0.1, 0.5, 2.0, 5.0]
 markers = ['x','o','s','>', '*','v', '^', '<', 'd','h', 'D']
@@ -44,6 +45,8 @@ if __name__ == "__main__":
     for csv_file in csv_files:
         df = pd.read_csv(csv_file, sep=",")
         df = df.rename(columns={'Number of Bad Clients': 'num_bad_clients'})
+        
+        os.makedirs("fig", exist_ok=True)
 
         title = csv_file.split("/")[1].split("_LQC")[0].replace("_", " ")
         savepath = "fig/grand_coalition_vs_lqc_" + title.replace(" ", "_") + ".pdf"

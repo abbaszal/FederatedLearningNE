@@ -164,7 +164,7 @@ def parse_args():
 
     # basic
     p_basic = subparsers.add_parser('basic')
-    p_basic.add_argument('--file_path',   type=str,   default='/data/spambase.data')
+    p_basic.add_argument('--file_path',   type=str,   default='data/spambase.data')
     p_basic.add_argument('--test_size',   type=float, default=0.2)
     p_basic.add_argument('--random_seed',   type=int,default=42)
     p_basic.add_argument('--n_clients',   type=int,   default=10)
@@ -177,7 +177,7 @@ def parse_args():
 
     # evaluating
     p_eval = subparsers.add_parser('evaluating')
-    p_eval.add_argument('--file_path',   type=str,   default='/data/spambase.data')
+    p_eval.add_argument('--file_path',   type=str,   default='data/spambase.data')
     p_eval.add_argument('--test_size',   type=float, default=0.2)
     p_eval.add_argument('--random_seed', type=int, default=42)
     p_eval.add_argument('--n_clients',   type=int,   default=10)
@@ -198,17 +198,17 @@ if __name__ == '__main__':
 
     if args.command == 'basic':
         if args.approach == 'fedlr':
-            args.save_dir = '/results/FedLR_Spambase_without_LQC'
+            args.save_dir = 'results/FedLR_Spambase_without_LQC'
             args.base_out = 'Spambase_results_with_LR.csv'
         else:  # fedfor
-            args.save_dir =  '/results/FedFor_Spambase_without_LQC'
+            args.save_dir =  'results/FedFor_Spambase_without_LQC'
             args.base_out = 'Spambase_results_with_FedFor.csv'
 
     elif args.command == 'evaluating':
         if args.approach == 'fedlr':
-            args.save_dir = '/results/FedLR_Spambase_without_LQC/evaluate_grand_combination_without_LQC'
+            args.save_dir = 'results/FedLR_Spambase_without_LQC/evaluate_grand_combination_without_LQC'
         else:  # fedfor
-            args.save_dir ='/results/FedFor_Spambase_without_LQC/evaluate_grand_combination_without_LQC'
+            args.save_dir ='results/FedFor_Spambase_without_LQC/evaluate_grand_combination_without_LQC'
 
     if args.command == 'basic':
         basic_run(args, X_train, y_train, X_test, y_test)
