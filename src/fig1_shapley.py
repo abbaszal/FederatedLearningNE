@@ -16,26 +16,6 @@ def encode_client(i: int, num_clients: int):
 
 
 def compute_shapley_values(coalition_values: dict):
-    """
-    Compute Shapley values given a dictionary of coalition values.
-
-    The dictionary should be indexed by binary strings of length equal to the number of players.
-    The value associated with each key is the value of the corresponding coalition.
-
-    Example:
-    ```python
-    coalition_values = {
-        "000": 0.8,
-        ...
-        "111": 0.1
-    }
-    ```
-
-    Args:
-        coalition_values (dict): Dictionary of coalition values.
-
-    Returns a list of Shapley values, one for each player.
-    """
     
     num_players = len(next(iter(coalition_values)))
     shapley = [0.0] * num_players
@@ -65,16 +45,6 @@ def compute_shapley_values(coalition_values: dict):
 
 
 def plot_local_acc_vs_shapley(local_accuracies: list, shapley_values: list, savepath: str|None=None, title: str|None=None):
-    """
-    Args:
-        local_accuracies (list): List of local accuracies. Length: num_clients.
-        shapley_values (list): List of Shapley values. Length: num_clients.
-        savepath (str, optional): Path to save the plot. Defaults to None.
-        title (str, optional): Title of the plot. Defaults to None.
-
-    Returns None, updates the matplotlib.pyplot state (use plt.show() to show the plot). 
-    """
-
 
     plt.figure(figsize=(5, 3))
     plt.scatter(local_accuracies, shapley_values)
