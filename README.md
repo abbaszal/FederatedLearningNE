@@ -27,24 +27,27 @@ scikit-learn >= 1.6.1
 
 ---
 
-## Datasets
-
-### 1. Spambase Dataset
-
-* Download the dataset from [UCI Spambase](https://archive.ics.uci.edu/static/public/94/spambase.zip).
-* Extract and place the data files into the `data/` directory.
-
-### 2. HuGaDB Dataset
-
-* The HuGaDB dataset should be preprocessed using the code available at https://github.com/thomasmarchioro3/FederatedForestsWithDP.
-Clone or copy the contents of the metadata directory from that repository into data/HuGaDB/, and ensure all files are placed correctly within the data/ directory structure.
-* The HuGaDB dataset is pre-partitioned for **18 clients**.
+* First Clone the Repository
 
 ---
 
 ## Reproducing Results
 
-### 1. Clone the Repository
+
+
+### 1. Datasets
+
+#### Spambase Dataset
+
+* Download the dataset from [UCI Spambase](https://archive.ics.uci.edu/static/public/94/spambase.zip).
+* Extract and place the data files into the `data/` directory.
+
+#### HuGaDB Dataset
+
+* The HuGaDB dataset should be preprocessed using the code available at https://github.com/thomasmarchioro3/FederatedForestsWithDP.
+Clone or copy the contents of the metadata directory from that repository into data/HuGaDB/, and ensure all files are placed correctly within the data/ directory structure.
+* The HuGaDB dataset is pre-partitioned for **18 clients**.
+
 
 ### 2. Basic Federated Learning Experiments (Without Low-Quality Clients -LQCs-)
 
