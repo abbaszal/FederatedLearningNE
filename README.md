@@ -27,7 +27,7 @@ scikit-learn >= 1.6.1
 
 ---
 
-## Dataset Preparation
+## Datasets
 
 ### 1. Spambase Dataset
 
