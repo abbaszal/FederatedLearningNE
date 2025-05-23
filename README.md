@@ -27,12 +27,10 @@ scikit-learn >= 1.6.1
 
 ---
 
-* First Clone the Repository
-
----
 
 ## Reproducing Results
 
+* First Clone the Repository, then:
 
 
 ### 1. Datasets
