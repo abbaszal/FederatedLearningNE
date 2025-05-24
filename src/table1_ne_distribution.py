@@ -1,5 +1,5 @@
 import pandas as pd
-
+import os
 import matplotlib.pyplot as plt
 
 def plot_nash_equilibrium_distribution(hist_combination: pd.Series, savepath: str):
@@ -46,6 +46,8 @@ def get_ne_details(df: pd.DataFrame, savepath: str):
 
 if __name__ == "__main__":
 
+    os.makedirs("tables", exist_ok=True)
+
     csv_files = [
         "results/FedFor_HuGaDB_LQC_0_to_10/Nash_Equilibrium_Details_fedfor_noise_3_c0.csv",
         "results/FedLR_HuGaDB_LQC_0_to_10/Nash_Equilibrium_Details_fedlr_noise_3_c0.csv",
@@ -85,6 +87,6 @@ if __name__ == "__main__":
 
     print(table)
 
-    # table.to_latex("tables/ne_details.tex", index=True)
+    table.to_latex("tables/ne_details.tex", index=True)
 
     # plt.show()
