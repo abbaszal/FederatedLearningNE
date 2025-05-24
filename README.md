@@ -107,7 +107,7 @@ To explore the impact of LQCs, use the following parameters:
 * `--n_clients`: number of clients (default: 10)
 * `--hyper_params`: max iterations and max depth (default: `10,100`)
 * `--n_trials`: number of trials (default: 50 trials for each max iterations and max depth )
-* `--noise_stds`: list of noise standard deviations to simulate LQC behavior (default: `[0.1, 0.3, 0.5, 0.7, 1, 2, 3, 4, 5]`)
+* `--noise_stds`: list of noise standard deviations (default: `[0.1, 0.3, 0.5, 0.7, 1, 2, 3, 4, 5]`)
 * `--corruption_prob`: probability of data corruption (default: 0.8)
 * `--nan_prob`: probability of missing values (default: 0.5)
 * `--label_corruption_prob`: probability of flipping labels (default: 0.2)
