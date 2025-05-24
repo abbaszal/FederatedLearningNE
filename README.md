@@ -49,7 +49,7 @@ Clone or copy the contents of the metadata directory from that repository into `
 * The HuGaDB dataset is pre-partitioned for **18 clients**.
 
 
-### 2. Basic Federated Learning Experiments (Without Low-Quality Clients -LQCs-)
+### 2. Federated Learning Experiments Without Low-Quality Clients (LQCs)
 
 These commands reproduce results using default parameters:
 
