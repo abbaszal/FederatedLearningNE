@@ -171,7 +171,7 @@ To see:
   <img src="fig/ne_hist_vs_lqc_FedLR_Spambase.png" width="45%" />
   <img src="fig/ne_hist_vs_lqc_FedFor_Spambase.png" width="45%" />
   <br>
-  <img src="fig/ne_hist_vs_lqc_FedLR_Spambase.png" width="45%" />
+  <img src="fig/ne_hist_vs_lqc_FedLR_HuGaDB.png" width="45%" />
   <img src="fig/ne_hist_vs_lqc_FedFor_HuGaDB.png" width="45%" />
 </p>
 
