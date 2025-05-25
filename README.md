@@ -71,11 +71,11 @@ python src/HuGaDB_Without_LQC.py evaluating --approach fedlr --model_type decisi
 #### Spambase Dataset
 
 ```bash
-src/python Spambase_Without_LQC.py basic --approach fedlr --model_type logistic
-src/python Spambase_Without_LQC.py basic --approach fedfor --model_type decisiontree
+python src/Spambase_Without_LQC.py basic --approach fedlr --model_type logistic
+python src/Spambase_Without_LQC.py basic --approach fedfor --model_type decisiontree
 
-src/python Spambase_Without_LQC.py evaluating --approach fedlr --model_type logistic
-src/python Spambase_Without_LQC.py evaluating --approach fedlr --model_type decisiontree
+python src/Spambase_Without_LQC.py evaluating --approach fedlr --model_type logistic
+python src/Spambase_Without_LQC.py evaluating --approach fedlr --model_type decisiontree
 ```
 
 > **Note:** For Spambase, avoid significantly increasing the number of clients due to the limited dataset size.
