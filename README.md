@@ -61,11 +61,11 @@ These commands reproduce results using default parameters:
 #### HuGaDB Dataset
 
 ```bash
-src/python HuGaDB_Without_LQC.py basic --approach fedlr --model_type logistic
-src/python HuGaDB_Without_LQC.py basic --approach fedfor --model_type decisiontree
+python src/HuGaDB_Without_LQC.py basic --approach fedlr --model_type logistic
+python src/HuGaDB_Without_LQC.py basic --approach fedfor --model_type decisiontree
 
-src/python HuGaDB_Without_LQC.py evaluating --approach fedlr --model_type logistic
-src/python HuGaDB_Without_LQC.py evaluating --approach fedlr --model_type decisiontree
+python src/HuGaDB_Without_LQC.py evaluating --approach fedlr --model_type logistic
+python src/HuGaDB_Without_LQC.py evaluating --approach fedlr --model_type decisiontree
 ```
 
 #### Spambase Dataset
