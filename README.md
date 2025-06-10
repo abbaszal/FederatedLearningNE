@@ -61,21 +61,21 @@ These commands reproduce results using default parameters:
 #### HuGaDB Dataset
 
 ```bash
-python src/HuGaDB_Without_LQC.py basic --approach fedlr --model_type logistic
-python src/HuGaDB_Without_LQC.py basic --approach fedfor --model_type decisiontree
+python src/hugadb_without_lqc.py basic --approach fedlr --model_type logistic
+python src/hugadb_without_lqc.py basic --approach fedfor --model_type decisiontree
 
-python src/HuGaDB_Without_LQC.py evaluating --approach fedlr --model_type logistic
-python src/HuGaDB_Without_LQC.py evaluating --approach fedlr --model_type decisiontree
+python src/hugadb_without_lqc.py evaluating --approach fedlr --model_type logistic
+python src/hugadb_without_lqc.py evaluating --approach fedlr --model_type decisiontree
 ```
 
 #### Spambase Dataset
 
 ```bash
-python src/Spambase_Without_LQC.py basic --approach fedlr --model_type logistic
-python src/Spambase_Without_LQC.py basic --approach fedfor --model_type decisiontree
+python src/spambase_without_lqc.py basic --approach fedlr --model_type logistic
+python src/spambase_without_lqc.py basic --approach fedfor --model_type decisiontree
 
-python src/Spambase_Without_LQC.py evaluating --approach fedlr --model_type logistic
-python src/Spambase_Without_LQC.py evaluating --approach fedlr --model_type decisiontree
+python src/spambase_without_lqc.py evaluating --approach fedlr --model_type logistic
+python src/spambase_without_lqc.py evaluating --approach fedlr --model_type decisiontree
 ```
 
 > **Note:** For Spambase, avoid significantly increasing the number of clients due to the limited dataset size.
@@ -121,15 +121,15 @@ then you can run:
 #### HuGaDB with LQCs
 
 ```bash
-python src/HuGaDB_With_LQC.py --approach fedlr
-python src/HuGaDB_With_LQC.py --approach fedfor
+python src/hugadb_with_lqc.py --approach fedlr
+python src/hugadb_with_lqc.py --approach fedfor
 ```
 
 #### Spambase with LQCs
 
 ```bash
-python src/Spambase_With_LQC.py --approach fedlr
-python src/Spambase_With_LQC.py --approach fedfor
+python src/spambase_with_lqc.py --approach fedlr
+python src/spambase_with_lqc.py --approach fedfor
 ```
 
 ---
