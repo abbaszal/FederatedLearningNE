@@ -201,7 +201,7 @@ To see:
 
 To cite this work, please use the following bibtex entry:
 
-```bash
+```bibtex
 @INPROCEEDINGS{11104301,
   author={Zal, Abbas and Marchioro, Thomas and Badia, Leonardo},
   booktitle={2025 IEEE International Mediterranean Conference on Communications and Networking (MeditCom)}, 
