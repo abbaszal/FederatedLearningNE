@@ -9,8 +9,9 @@ Emails: `{abbas.zal@studenti., thomas.marchioro@, leonardo.badia@}unipd.it`
 
 ## Code used in the paper:
 
->....
->....
+
+Zal A, Marchioro T, Badia L. [Evaluating Coalition Stability in Federated Learning Under Voluntary Client Participation](https://ieeexplore.ieee.org/abstract/document/11104301). In *2025 IEEE International Mediterranean Conference on Communications and Networking (MeditCom)*. IEEE; 2025.
+
 
 ---
 
