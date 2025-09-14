@@ -202,7 +202,13 @@ To see:
 To cite this work, please use the following bibtex entry:
 
 ```bash
-...
+@INPROCEEDINGS{11104301,
+  author={Zal, Abbas and Marchioro, Thomas and Badia, Leonardo},
+  booktitle={2025 IEEE International Mediterranean Conference on Communications and Networking (MeditCom)}, 
+  title={Evaluating Coalition Stability in Federated Learning Under Voluntary Client Participation}, 
+  year={2025},
+  organization={IEEE}
+}
 
 ```
 
